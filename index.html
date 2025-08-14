@@ -1,0 +1,166 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon.svg"
+    />
+    <script type="module" src="./script.js"></script>
+    <title>Kanban Task Management</title>
+  </head>
+
+  <body>
+    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <nav class="side-bar" id="side-bar-div">
+      <div id="side-logo-div">
+        <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
+      </div>
+
+      <div class="boards-nav-links-div" id="boards-nav-links-div">
+        <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
+        <button class="board-btn">Launch Career</button>
+      </div>
+      <div id="sidebar-controls">
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+              <span class="emoji">🌞</span>
+              <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+              </label>
+              <span class="emoji">🌚</span>
+            </div>
+          
+            <!-- Hide Sidebar Button -->
+            <button class="hide-sidebar-btn">
+                <span class="emoji">🚫</span>
+              Hide Sidebar
+            </button>
+          </div>
+      
+    </nav>
+
+    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+    <div id="layout">
+      <header id="header" class="sticky-header">
+        <div class="header-name-div">
+          <img
+            src="./assets/favicon.svg"
+            alt="logo-mobile"
+            class="logo-mobile"
+            id="mobile-menu-btn"
+          />
+          <h2 class="header-board-name" id="header-board-name">
+            Launch Career
+          </h2>
+          <div class="data-status" id="data-status">
+            <span class="status-indicator" id="status-indicator"></span>
+            <span class="status-text" id="status-text">Loading...</span>
+          </div>
+          </div>
+          <div class="header-controls">
+            <button id="show-sidebar-btn" class="show-sidebar-btn">
+              <img src="./assets/icon-show-sidebar.svg" alt="Show Sidebar" />
+            </button>
+            <button id="add-task-btn">+ Add New Task</button>
+          </div>
+      </header>
+
+      <div class="container">
+        <!-- Loading State -->
+        <div id="loading-overlay" class="loading-overlay">
+          <div class="loading-spinner"></div>
+          <p>Loading tasks...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-message" class="error-message hidden">
+          <div class="error-content">
+            <h3>⚠️ Error Loading Tasks</h3>
+            <p id="error-text">Failed to load tasks from the server.</p>
+            <button id="retry-btn" class="retry-btn">Retry</button>
+          </div>
+        </div>
+
+        <main class="card-column-main">
+          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+          <div class="column-div" data-status="todo">
+            <div id="todo-head-div" class="column-head-div">
+              <span class="dot" id="todo-dot"></span>
+              <h4 id="toDoText" class="columnHeader">TODO (0)</h4>
+            </div>
+            <!-- Tasks container for TODO -->
+            <div class="tasks-container">
+              <!-- Tasks will be loaded dynamically -->
+            </div>
+          </div>
+          <!-- DOING Column -->
+          <div class="column-div" data-status="doing">
+            <div id="doing-head-div" class="column-head-div">
+              <span class="dot" id="doing-dot"></span>
+              <h4 id="doingText" class="columnHeader">DOING (0)</h4>
+            </div>
+            <!-- Tasks container for DOING -->
+            <div class="tasks-container">
+              <!-- Tasks will be loaded dynamically -->
+            </div>
+          </div>
+          <!-- DONE Column -->
+          <div class="column-div" data-status="done">
+            <div id="done-head-div" class="column-head-div">
+              <span class="dot" id="done-dot"></span>
+              <h4 id="doneText" class="columnHeader">DONE (0)</h4>
+            </div>
+            <!-- Tasks container for DONE -->
+            <div class="tasks-container">
+              <!-- Tasks will be loaded dynamically -->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <div class="mobile-menu-logo">
+            <img src="./assets/logo-light.svg" alt="logo" />
+          </div>
+          <button class="close-mobile-menu" id="close-mobile-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-content">
+          <div class="boards-nav-links-div">
+            <h4>ALL BOARDS (1)</h4>
+            <button class="board-btn">Launch Career</button>
+          </div>
+          <div class="mobile-menu-controls">
+            <!-- Theme Toggle for Mobile -->
+            <div class="theme-toggle">
+              <span class="emoji">🌞</span>
+              <label class="switch">
+                <input type="checkbox" id="mobile-theme-switch">
+                <span class="slider"></span>
+              </label>
+              <span class="emoji">🌚</span>
+            </div>
+            <!-- Add Task Button for Mobile -->
+            <button class="mobile-add-task-btn" id="mobile-add-task-btn">
+              <span class="emoji">➕</span>
+              Add New Task
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
