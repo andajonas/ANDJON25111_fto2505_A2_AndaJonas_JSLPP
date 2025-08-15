@@ -13,18 +13,21 @@ export const initialTasks = [
       title: "Launch Epic Career 🚀",
       description: "Create a killer Resume",
       status: "todo",
+      priority: "medium", // Added priority field
     },
     {
       id: 2,
       title: "Master JavaScript 💛",
       description: "Get comfortable with the fundamentals",
       status: "doing",
+      priority: "high", // Added priority field
     },
     {
       id: 3,
       title: "Keep on Going 🏆",
       description: "You're almost there",
       status: "doing",
+      priority: "low", // Added priority field
     },
     {
       id: 4,
@@ -32,6 +35,7 @@ export const initialTasks = [
       description:
         "Study fundamental data structures and algorithms to solve coding problems efficiently",
       status: "todo",
+      priority: "high", // Added priority field
     },
     {
       id: 5,

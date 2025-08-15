@@ -1,4 +1,4 @@
-/**
+**
  * @file ui.js
  * @description UI rendering and modal management.
  */

@@ -13,12 +13,14 @@ export const initialTasks = [
       title: "Launch Epic Career 🚀",
       description: "Create a killer Resume",
       status: "todo",
+      priority: "medium", // Added priority field
     },
     {
       id: 2,
       title: "Master JavaScript 💛",
       description: "Get comfortable with the fundamentals",
       status: "doing",
+      priority: "high", // Added priority field
     },
     {
       id: 3,
