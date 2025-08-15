@@ -27,7 +27,7 @@ export const initialTasks = [
       title: "Keep on Going 🏆",
       description: "You're almost there",
       status: "doing",
-      priority: "low", // Added priority field
+      priority: "medium", // Added priority field
     },
     {
       id: 4,
@@ -35,7 +35,7 @@ export const initialTasks = [
       description:
         "Study fundamental data structures and algorithms to solve coding problems efficiently",
       status: "todo",
-      priority: "high", // Added priority field
+      priority: "medium", // Added priority field
     },
     {
       id: 5,

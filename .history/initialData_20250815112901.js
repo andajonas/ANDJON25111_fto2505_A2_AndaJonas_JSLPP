@@ -35,7 +35,7 @@ export const initialTasks = [
       description:
         "Study fundamental data structures and algorithms to solve coding problems efficiently",
       status: "todo",
-      priority: "high", // Added priority field
+      priority: "medium", // Added priority field
     },
     {
       id: 5,

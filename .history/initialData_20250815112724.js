@@ -20,14 +20,14 @@ export const initialTasks = [
       title: "Master JavaScript 💛",
       description: "Get comfortable with the fundamentals",
       status: "doing",
-      priority: "high", // Added priority field
+      priority: "medium", // Added priority field
     },
     {
       id: 3,
       title: "Keep on Going 🏆",
       description: "You're almost there",
       status: "doing",
-      priority: "low", // Added priority field
+      priority: "medium", // Added priority field
     },
     {
       id: 4,
@@ -35,7 +35,6 @@ export const initialTasks = [
       description:
         "Study fundamental data structures and algorithms to solve coding problems efficiently",
       status: "todo",
-      priority: "high", // Added priority field
     },
     {
       id: 5,
@@ -43,7 +42,6 @@ export const initialTasks = [
       description:
         "Gain practical experience and collaborate with others in the software development community",
       status: "done",
-      priority: "medium", // Added priority field
     },
     {
       id: 6,
@@ -51,6 +49,5 @@ export const initialTasks = [
       description:
         "Create a portfolio showcasing your skills and projects to potential employers",
       status: "done",
-      priority: "high", // Added priority field
     },
 ];
